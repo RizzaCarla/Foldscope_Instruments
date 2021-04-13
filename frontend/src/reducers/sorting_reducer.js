@@ -4,7 +4,7 @@ const sortingReducer = ( oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case SET_CURRENT_STUDENTS:
-      return 
+      return action.students
     default:
       return oldState
   }

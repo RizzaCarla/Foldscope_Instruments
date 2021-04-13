@@ -4,7 +4,7 @@ import { fetchStudent, fetchStudents } from '../../actions/student_actions';
 
 const msp = state => ({
   student: state.studentReducer,
-  students: state.studentReducer,
+  students: state.sortingReducer,
 })
 
 const mdp = dispatch => ({
