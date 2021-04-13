@@ -1,66 +1,35 @@
 import React from 'react';
+import MainPageItems from './main_page_items';
+import './main-page.css';
 
 class MainPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      student: []
-    }
-  }
-  
   componentDidMount() {
     this.props.fetchStudents()
-      // .then((data) => {
-      //   console.log(data.students.data)
-      //   const name = data.student.data.results[0]
-      //   const email = data.student.data.results[0]
-      //   const address = data.student.data.results[0]
-      //   const birthday = data.student.data.results[0]
-      //   const age = data.student.data.results[0]
-      //   const photo = data.student.data.results[0]
-      //   this.setState({ student: Object.assign({}, name, email, address, birthday, age, photo)}))
-      // console.log(data)
-      // })
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.students && this.props.students !== prevProps.students) {
-  //     this.props.fetchStudents()
-  //       // .then((data) => console.log(data))
-  //   }
-  // }
 
   render() {
     if (!this.props.student || !this.props.students) {
       return null
     }
 
-    console.log("students", this.props.students)
-    return(
+    return (
       <div className="main-page">
-        <ul>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
-          <li>
-
-          </li>
+        <ul className="students-list">
+          {
+            Object.values(this.props.students).map((student, index) =>
+              <li key={index}>
+                <MainPageItems 
+                  student={student}
+                  name={student.name}
+                  email={student.email}
+                  address={student.address}
+                  birthday={student.birthday}
+                  photo={student.photo}
+                />
+              </li>
+            )
+          }
         </ul>
       </div>
     )
