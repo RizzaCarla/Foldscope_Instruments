@@ -31,6 +31,12 @@ class MainPage extends React.Component {
             )
           }
         </ul>
+        <div className='footer'>
+          <p>Rizza Carla Modina Marzo</p>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rizzamarzo/">LinkedIn</a>
+          <a target="_blank" rel="noreferrer" href="https://rizzacarla.github.io/myPortfolio/">Portfolio</a>
+          <a target="_blank" rel="noreferrer" href="https://github.com/RizzaCarla">Github</a>
+        </div>
       </div>
     )
   }
