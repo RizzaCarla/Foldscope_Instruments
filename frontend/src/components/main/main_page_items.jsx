@@ -11,12 +11,12 @@ class MainPageItems extends React.Component {
     }
 
     return(
-      <div>
-        <section>
+      <div className="student-item">
+        <section className="student-item-left">
           <img src={this.props.photo} alt="student" />
           <h1>{this.props.name}</h1>
         </section>
-        <section>
+        <section className="student-item-right">
           <p><EmailIcon />: {this.props.email}</p>
           <p><HomeIcon />: {this.props.address}</p>
           <p><CakeIcon />: {this.props.birthday}</p>

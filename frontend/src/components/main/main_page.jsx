@@ -1,5 +1,6 @@
 import React from 'react';
 import MainPageItems from './main_page_items';
+import './main-page.css';
 
 class MainPage extends React.Component {
 
@@ -14,20 +15,22 @@ class MainPage extends React.Component {
 
     return (
       <div className="main-page">
-        {
-          Object.values(this.props.students).map((student, index) =>
-            <li key={index}>
-              <MainPageItems 
-                student={student}
-                name={student.name}
-                email={student.email}
-                address={student.address}
-                birthday={student.birthday}
-                photo={student.photo}
-              />
-            </li>
-          )
-        }
+        <ul className="students-list">
+          {
+            Object.values(this.props.students).map((student, index) =>
+              <li key={index}>
+                <MainPageItems 
+                  student={student}
+                  name={student.name}
+                  email={student.email}
+                  address={student.address}
+                  birthday={student.birthday}
+                  photo={student.photo}
+                />
+              </li>
+            )
+          }
+        </ul>
       </div>
     )
   }
