@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MainPage from './main_page';
-import { fetchStudent, fetchStudents } from '../../actions/student_actions'
+import { fetchStudent, fetchStudents } from '../../actions/student_actions';
 
 const msp = state => ({
   student: state.studentReducer,
