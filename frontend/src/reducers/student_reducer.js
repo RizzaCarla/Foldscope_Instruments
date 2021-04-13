@@ -37,7 +37,7 @@ const studentReducer = ( oldState = {}, action) => {
         student.email = data[i].email
         student.address = location.street.number.toString() + " " + location.street.name + ", " + location.city + ", " + location.state + " " + location.postcode + ", " + location.country
         student.birthday = months[origDate[1]] + " " + origDate[2] + ", " + origDate[0] + ` (Age: ${data[i].dob.age})`
-        student.photo = data[i].picture.medium
+        student.photo = data[i].picture.large
         oneStudent.push(student)
       }
       return oneStudent
